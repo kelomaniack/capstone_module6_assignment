@@ -37,6 +37,14 @@
     return this.location && this.location.position ? 
         angular.copy(this.location.position) : null;
   }
+  CurrentOrigin.prototype.getLatitude = function() {
+    return this.location && this.location.position ?
+      angular.copy(this.location.position.lat) : null;
+  }
+  CurrentOrigin.prototype.getLongitude = function() {
+    return this.location && this.location.position ?
+      angular.copy(this.location.position.lng) : null;
+  }
   CurrentOrigin.prototype.getAddress = function() {
     return this.location && this.location.address ? 
         angular.copy(this.location.address) : null;

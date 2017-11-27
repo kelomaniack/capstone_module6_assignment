@@ -9,7 +9,14 @@ class ImagesController < ApplicationController
 
   def index
     authorize Image
-    @images = policy_scope(Image.all)
+    origin = params[:lng] && params[:lat] ? Point.new(params[:lng].to_f, params[:lat].to_f) : nil
+    miles = params[:miles] ? params[:miles].to_f : nil
+    scope = Image.all
+    scope = scope.within(miles, :origin=>origin) if origin && miles
+    scope = scope.including(params[:include]) if params[:include]
+    scope = scope.excluding(params[:exclude]) if params[:exclude]
+    @images = policy_scope(scope)
+    @images = Image.with_distance(origin, @images) if origin
     @images = ImagePolicy.merge(@images)
   end
 
