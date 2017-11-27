@@ -1,0 +1,22 @@
+PROMPT
+Provide a brief description of how the peer grader can access your solution to the assignment (e.g., how to access the display, how to explicitly include/exclude Images) to evaluate the assignment. Feel free to also point out anything you think they might find interesting.
+i. Click "Go To => Images"
+ii. Enter the location name and click "Lookup", or just click "My Position" (in the navigation bar).
+iii. Enter the distance in miles (in the navigation bar) to trigger the HTTP call with the additional parameter miles.
+iv. You can then filter out the result by clicking "Select all images" or "Deselect all images" or "Include images" or just show again all images by clicking "Show all images".
+v. Check the desired checkboxes before the names of images and click "Include images". The selected images will remain on the list and all the unselected images will be removed / filtered out from the list.
+vi. You can just change the location entry and the list will be renewed/recreated.
+vii. Clicking "Show all images" will give back the full list of images.
+
+PROMPT
+Supply the base, public URL of your web client that hosts your solution for this assignment.
+ https://tranquil-temple-47845.herokuapp.com/
+
+PROMPT
+Supply the URL of a branch or tag in your public Git repository that represents the version of source code deployed for the Rails portion of your solution. This may be the same URL as the SPA version if you are using a single source tree.
+ https://github.com/kelomaniack/capstone_module6_assignment
+
+
+PROMPT
+Supply the URL of a branch or tag in your public Git repository that represents the version of source code deployed for the SPA portion of your solution. This may be the same URL as the Rails version if you are using a single source tree.
+ https://github.com/kelomaniack/capstone_module6_assignment
